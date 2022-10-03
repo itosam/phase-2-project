@@ -24,7 +24,7 @@ function MovieList({
   return (
     <section>
       <h2>Movies</h2>
-      <input type="text" placeholder="Search..." onChange={handleOnChange} />
+      <input type="text" placeholder="Search..." onChange={handleOnChange} value={searchQuery} />
 
       <ul className="cards">{movieCards}</ul>
     </section>
