@@ -1,12 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { Switch, Route } from "react-router-dom";
 
-function App() {
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import About from "./components/About";
+import MovieContainer from "./components/MovieContainer";
+
+const App = () => {
+
   return (
-    <div className="App">
-     App components will go here
+    <div>
+      <NavBar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/movies">
+          <MovieContainer />
+        </Route>
+      </Switch>
     </div>
   );
-}
+};
 
 export default App;
