@@ -12,10 +12,10 @@ function NavBar(){
       <nav>
         <div className="navigation">
           <NavLink className="button" exact to="/movies">
-            Movies
+            Movies  
           </NavLink>
           <NavLink className="button" to="/movies/new">
-            Add Movie
+            Add Movie   
           </NavLink>
           <NavLink className="button" to="/about">
             About

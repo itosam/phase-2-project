@@ -13,7 +13,7 @@ function MovieContainer() {
         fetch('http://localhost:3001/movies')
             .then(r=>r.json())
             .then(data => setMovies(data))
-    },[]);
+        },[]);
     const onAddMovie=(newMovie)=>{
         setMovies({...movies, newMovie})
     }
