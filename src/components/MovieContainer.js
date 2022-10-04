@@ -11,10 +11,10 @@ function MovieContainer() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3001/movies')
+        fetch('https://api.themoviedb.org/3/movie/popular?api_key=82995d0c81cf9ce872f53581f150f013&language=en-US&page=1')
           .then(r=>r.json())
           .then(movies => {
-            const updatedMovieData = movies.map(movies => {
+            const updatedMovieData = movies.results.map(movies => {
               return {...movies, favorite: false,}
             });
             setMovies(updatedMovieData);
