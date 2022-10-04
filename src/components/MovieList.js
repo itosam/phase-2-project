@@ -6,17 +6,20 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function MovieList({
-  movies, searchQuery,setSearchQuery
+  movies, favorite, searchQuery,setSearchQuery, onFavoritesClick, onFavoriteMovies
 }) {
   const movieCards = movies.map((movie) => {
     return (
       <MovieTile
-        key={movie.id}
+        key={movie.imdbID}
         title={movie.title}
         year={movie.year}
         poster={movie.poster}
         plot={movie.plot}
         rating={movie.rating}
+        favorite={movie.favorite}
+        onFavoritesClick={onFavoritesClick}
+        onFavoriteMovies={onFavoriteMovies}
       />
     );
   });
@@ -28,6 +31,9 @@ function MovieList({
     <Container fluid>
       <h2>Movies</h2>
       <input className="search" type="text" placeholder="Search..." onChange={handleOnChange} value={searchQuery} />
+      <button variant="primary" onclick={onFavoritesClick}>
+        {favorite ? "Hide Favorites" : "Show Favorites"}
+      </button>
       <Row>
         <Col lg={4}>
          {movieCards} 

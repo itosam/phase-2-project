@@ -1,40 +1,40 @@
 {
-    "movies":   [
-        {
-            "title": "The Avengers",
-            "year": "2012",
-            "imdbID": "tt0848228",
-            "type": "movie",
-            "poster": "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
-            "plot":"Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
-            "rating": "8.0/10"
-        },
-        {
-            "title": "Avengers: Endgame",
-            "year": "2019",
-            "imdbID": "tt4154796",
-            "type": "movie",
-            "poster": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
-            "plot" : "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
-            "rating": "8.4/10"
-        },
-        {
-            "title": "Avengers: Infinity War",
-            "year": "2018",
-            "imdbID": "tt4154756",
-            "type": "movie",
-            "poster": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg",
-            "plot":"After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
-            "rating":"8.4/10"
-        },
-        {
-            "title": "Avengers: Age of Ultron",
-            "year": "2015",
-            "imdbID": "tt2395427",
-            "type": "movie",
-            "poster": "https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg",
-            "plot":"When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's mightiest heroes to stop the villainous Ultron from enacting his terrible plan.",
-            "rating":"7.3/10"
-        }
-    ]
+  "movies": [
+    {
+      "title": "The Avengers",
+      "year": "2012",
+      "imdbID": "tt0848228",
+      "type": "movie",
+      "poster": "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+      "plot": "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
+      "rating": "8.0/10"
+    },
+    {
+      "title": "Avengers: Endgame",
+      "year": "2019",
+      "imdbID": "tt4154796",
+      "type": "movie",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
+      "plot": "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+      "rating": "8.4/10"
+    },
+    {
+      "title": "Avengers: Infinity War",
+      "year": "2018",
+      "imdbID": "tt4154756",
+      "type": "movie",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg",
+      "plot": "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+      "rating": "8.4/10"
+    },
+    {
+      "title": "Avengers: Age of Ultron",
+      "year": "2015",
+      "imdbID": "tt2395427",
+      "type": "movie",
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg",
+      "plot": "When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's mightiest heroes to stop the villainous Ultron from enacting his terrible plan.",
+      "rating": "7.3/10"
+    }
+  ]
 }
