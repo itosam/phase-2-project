@@ -6,7 +6,7 @@ function MovieTile({title, year, poster, plot, rating}){
   const API_IMG="https://image.tmdb.org/t/p/w500/"
   return (
     <Card className= "card" style={{ width: '18rem' }}>
-       <Card.Img variant="top" src={API_IMG+poster} alt={title} />
+       <Card.Img variant="top" src={API_IMG+poster} alt={title} style={{ width: '18rem' }} />
         <Card.Body>
            <Card.Title>{title}</Card.Title>
            <Card.Text>
