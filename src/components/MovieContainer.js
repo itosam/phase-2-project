@@ -1,13 +1,12 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Switch, Route } from "react-router-dom";
 import MovieList from './MovieList';
 import MovieForm from './MovieForm';
-import { getByTitle } from '@testing-library/react';
 
 function MovieContainer() {
     const [movies, setMovies] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
-    const [favorite, setFavorites] = useState(false);
+    const [favorites, setFavorites] = useState(false);
 
 
     useEffect(() => {
@@ -15,7 +14,7 @@ function MovieContainer() {
           .then(r=>r.json())
           .then(movies => {
             const updatedMovieData = movies.map(movies => {
-              return {...movies, favorite: false,}
+              return {...movies, favorite: false}
             });
             setMovies(updatedMovieData);
             })
@@ -25,21 +24,23 @@ function MovieContainer() {
         setMovies({...movies, newMovie})
     }
 
-    const moviesToDisplay = movies.filter(movie => movie.title.toLowerCase().includes(searchQuery.toLowerCase()))
-
     const onFavoriteMovies= (favoriteMovies) => {
         const updatedMoviesClick = movies.map((movies) =>
-          movies.title === favoriteMovies.title ? favoriteMovies : movies
+          movies.id === favoriteMovies.id ? favoriteMovies : movies
         );
         setMovies(updatedMoviesClick);
       }
+      
+      const handleShowFavoriteMovies = () => {
+          setFavorites(favorite => !favorite)
+        }
 
-    const handleShowFavoriteMovies = () => {
-        setFavorites(favorite => !favorite)
+      let moviesToDisplay = movies;
+      if (favorites) {
+        moviesToDisplay = moviesToDisplay.filter(movie => movie.favorite);
       }
-      let displayFavoriteMovies = movies;
-      if (favorite) {
-        displayFavoriteMovies = displayFavoriteMovies.filter((movies) => movies.favorite);
+      if (searchQuery) {
+        moviesToDisplay = moviesToDisplay.filter(movie => movie.title.toLowerCase().includes(searchQuery.toLowerCase()))
       }
 
     return (
@@ -48,7 +49,7 @@ function MovieContainer() {
                 <MovieList
                     movies={moviesToDisplay}
                     searchQuery={searchQuery}
-                    favorite={favorite}
+                    favorites={favorites}
                     setSearchQuery={setSearchQuery}
                     onFavoritesClick={handleShowFavoriteMovies}
                     onFavoriteMovies={onFavoriteMovies}
