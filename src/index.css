@@ -12,7 +12,6 @@ code {
     monospace;
 }
 
-
 .card {
 padding: 1rem;
 margin: 1rem;
@@ -22,8 +21,19 @@ background-color: rgb(194, 200, 206);
 }
 
 .grid{
-min-height: 100%;
 display: flex;
 flex-wrap: wrap;
 flex-direction: row;
+}
+.movie-box{
+border: 2px;
+border-color: red;
+
+
+}
+
+.home-poster{
+  width: 10%;
+  padding: 4px;
+  margin: 2px;
 }

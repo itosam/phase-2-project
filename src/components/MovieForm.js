@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from "react";
 
-
 const initialState = {
   title: "",
   release_date: "",
@@ -90,4 +89,5 @@ function MovieForm({ onAddMovie }) {
     </section>
   );
 };
+
 export default MovieForm;

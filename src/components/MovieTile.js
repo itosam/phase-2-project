@@ -19,14 +19,14 @@ function MovieTile({id, title, year, poster, plot, rating, favorite, onFavoriteM
   }
   
   return (
-    <Card className= "card" style={{ width: '24rem' }}>
-       <Card.Img variant="top" src={API_IMG+poster} alt={title} style={{ width: '22rem' }} />
+    <Card className= "card" style={{ width: '26rem' }}>
+       <Card.Img variant="top" src={poster} alt={title} style={{ width: '24rem' }} />
         <Card.Body>
-           <Card.Title>{title}</Card.Title>
+           <Card.Title><strong>{title}</strong></Card.Title>
            <Card.Text>
-            <p>{year}</p>
-            <p>{plot}</p>
-            <p>{rating}</p>
+            <p><strong>Release date</strong>: {year}</p>
+            <p><strong>Plot</strong>: {plot}</p>
+            <p><strong>Rating</strong>:{rating}</p>
            </Card.Text>
            <Button variant="primary" onClick={handleFavoriteClick}>{favorite ? "remove Favorite" : "add to Favorites"}</Button>
          </Card.Body>

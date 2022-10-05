@@ -1,18 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import MovieTile from "./MovieTile";
 import Container from 'react-bootstrap/Container';
 
 function MovieList({
-  movies, 
-  favorites, 
-  searchQuery, 
-  setSearchQuery, 
-  onFavoriteMovies, 
+  movies,
+  favorites,
+  searchQuery,
+  setSearchQuery,
+  onFavoriteMovies,
   onFavoritesClick,
 }) {
-  
-  const movieCards = movies.map((movie) => {
-
+  const [moviesIndex, setMoviesIndex] = useState(4)
+  const movieCards = movies
+  .slice(0, moviesIndex)
+  .map((movie) => {
     return (
       <MovieTile
         key={movie.id}
@@ -27,9 +28,10 @@ function MovieList({
       />
     );
   });
-
+  const handleClickMore = () => {
+    setMoviesIndex((moviesIndex) => (moviesIndex + 4) % movies.length);
+  }
   const handleOnChange = (e) => setSearchQuery(e.target.value);
-
   return (
     <Container fluid>
       <h2>Movies</h2>
@@ -38,10 +40,8 @@ function MovieList({
       <div className="grid">
          {movieCards}
       </div>
- 
-
+      <button onClick={handleClickMore}>Show More!</button>
     </Container>
   );
 };
-
 export default MovieList;
