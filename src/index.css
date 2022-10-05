@@ -14,11 +14,16 @@ code {
 
 
 .card {
-padding-bottom: 1rem;
-padding-left:1rem;
-padding-right: 2rem;
-padding-top: 1rem;
+padding: 1rem;
+margin: 1rem;
 border: 2px;
 border-color: black;
 background-color: rgb(194, 200, 206);
+}
+
+.grid{
+min-height: 100%;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
 }

@@ -19,8 +19,8 @@ function MovieTile({id, title, year, poster, plot, rating, favorite, onFavoriteM
   }
   
   return (
-    <Card className= "card" style={{ width: '18rem' }}>
-       <Card.Img variant="top" src={API_IMG+poster} alt={title} />
+    <Card className= "card" style={{ width: '24rem' }}>
+       <Card.Img variant="top" src={API_IMG+poster} alt={title} style={{ width: '22rem' }} />
         <Card.Body>
            <Card.Title>{title}</Card.Title>
            <Card.Text>

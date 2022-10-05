@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import MovieContainer from "./components/MovieContainer";
 
+
 const App = () => {
 
   return (

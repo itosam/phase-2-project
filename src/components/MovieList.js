@@ -1,8 +1,6 @@
 import React from "react";
 import MovieTile from "./MovieTile";
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 function MovieList({
   movies, 
@@ -37,11 +35,11 @@ function MovieList({
       <h2>Movies</h2>
       <input type="text" placeholder="Search..." onChange={handleOnChange} value={searchQuery} />
       <button onClick={onFavoritesClick}>{favorites ? "Show All" : "Show Favorites"}</button>
-      <Row>
-        <Col lg={4}>
-         {movieCards} 
-        </Col> 
-      </Row>
+      <div className="grid">
+         {movieCards}
+      </div>
+ 
+
     </Container>
   );
 };
