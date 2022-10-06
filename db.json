@@ -40,7 +40,7 @@
       "video": false,
       "vote_average": 7.5,
       "vote_count": 1304,
-      "favorite": true,
+      "favorite": false,
       "watched": false
     },
     {
@@ -60,7 +60,7 @@
       "video": false,
       "vote_average": 7.5,
       "vote_count": 1185,
-      "favorite": true,
+      "favorite": false,
       "watched": true
     },
     {
@@ -121,7 +121,8 @@
       "title": "Pinocchio",
       "video": false,
       "vote_average": 6.7,
-      "vote_count": 815
+      "vote_count": 815,
+      "favorite": true
     },
     {
       "adult": false,
@@ -161,7 +162,8 @@
       "title": "Samaritan",
       "video": false,
       "vote_average": 7,
-      "vote_count": 1210
+      "vote_count": 1210,
+      "favorite": false
     },
     {
       "adult": false,
@@ -262,7 +264,8 @@
       "title": "Presences",
       "video": false,
       "vote_average": 7,
-      "vote_count": 82
+      "vote_count": 82,
+      "favorite": false
     },
     {
       "adult": false,
@@ -401,7 +404,8 @@
       "title": "Lou",
       "video": false,
       "vote_average": 6.5,
-      "vote_count": 164
+      "vote_count": 164,
+      "favorite": true
     }
   ]
 }

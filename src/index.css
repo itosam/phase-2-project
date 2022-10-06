@@ -26,10 +26,10 @@ flex-wrap: wrap;
 flex-direction: row;
 }
 .movie-box{
-border: 2px;
-border-color: red;
-
-
+border-style: solid;
+border-color: black;
+border-radius:10px;
+width: 40%;
 }
 
 .home-poster{
