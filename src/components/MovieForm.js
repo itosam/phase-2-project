@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState } from "react";
+import { Button, Form, Container, Row, Col } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 const initialState = {
   title: "",
@@ -11,7 +13,7 @@ const initialState = {
 
 function MovieForm({ onAddMovie }) {
   const [formData, setFormData] = useState(initialState);
-  
+  const history = useHistory()
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((formData) => ({ ...formData, [name]: value }));
@@ -32,61 +34,91 @@ function MovieForm({ onAddMovie }) {
       body: JSON.stringify(newMovie)
     })
     .then((res) => res.json())
-    .then((onAddMovie(newMovie)))
+    .then(newMovie =>{
+      (onAddMovie(newMovie));
+      history.push('/')
+    })
   }
     
 
   return (
-    <section>
-      <form className="form" autoComplete="off" onSubmit={handleSubmit}>
-        <h3>Add New Movie</h3>
-        <label htmlFor="title">Movie Title</label>
-        <input
-          type="text"
-          id="title"
-          name="title"
-          placeholder="Movie Title"
-          onChange={handleChange}
-          value={formData.title}
-        />
-        <label htmlFor="release_date">Releast Date</label>
-        <textarea
-          id="release_date"
-          name="release_date"
-          placeholder="Release date or year"
-          onChange={handleChange}
-          value={formData.release_date}
-        />
-        <label htmlFor="plot">Plot Summary</label>
-        <textarea
-          id="plot"
-          name="plot"
-          placeholder="Plot Summary"
-          onChange={handleChange}
-          value={formData.plot}
-        />
-        <label htmlFor="poster">Poster/Image</label>
-        <input
-          type="text"
-          id="poster"
-          name="poster"
-          placeholder="Poster/Movie Image"
-          onChange={handleChange}
-          value={formData.poster}
-        />
-        <label htmlFor="rating">Rating</label>
-        <input
-          type="number"
-          id="rating"
-          name="rating"
-          step="0.1"
-          placeholder="Rating"
-          onChange={handleChange}
-          value={formData.rating}
-        />
-        <button type="submit">Add Movie</button>
-      </form>
-    </section>
+      <Container className="my-3">
+        <Form className="form border rounded  " autoComplete="off" onSubmit={handleSubmit}>
+          <Form.Group className="my-3 mx-3">
+            <h3>Add New Movie</h3>
+            <Row>
+              <Col>
+                <Form.Label htmlFor="title">Movie Title</Form.Label>
+                <Form.Control
+                  type="text"
+                  id="title"
+                  name="title"
+                  placeholder="Movie Title"
+                  onChange={handleChange}
+                  value={formData.title}
+                />
+
+              </Col>
+              <Col>
+                <Form.Label htmlFor="release_date">Releast Date</Form.Label>
+                <Form.Control
+                  className=""
+                  type="date"
+                  id="release_date"
+                  name="release_date"
+                  placeholder="Release date or year"
+                  onChange={handleChange}
+                  value={formData.release_date}
+                />
+              </Col>
+            </Row>
+​
+            <Row>
+              <Col>
+                <Form.Label htmlFor="poster">Poster/Image</Form.Label>
+                <Form.Control
+                  type="text"
+                  id="poster"
+                  name="poster"
+                  placeholder="Poster/Movie Image"
+                  onChange={handleChange}
+                  value={formData.poster}
+                />
+              </Col>
+              <Col>
+                <Form.Label htmlFor="rating">Rating</Form.Label>
+                <Form.Control
+                  type="number"
+                  id="rating"
+                  name="rating"
+                  step="0.1"
+                  placeholder="Rating"
+                  onChange={handleChange}
+                  value={formData.rating}
+                />
+              </Col>
+            </Row>
+​
+            <Form.Label htmlFor="plot">Plot Summary</Form.Label>
+            <Form.Control
+              className="my-3"
+              as="textarea"
+              rows={3}
+              id="plot"
+              name="plot"
+              placeholder="Plot Summary"
+              onChange={handleChange}
+              value={formData.plot}
+            />
+            <Button
+              type="submit"
+              class="my-3"
+            >Add Movie</Button>
+          </Form.Group>
+        </Form>
+​
+​
+      </Container>
   );
 };
 

@@ -10,7 +10,7 @@ function MovieContainer() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3001/movies')
+        fetch('http://localhost:3001/movies?_sort=release_date&_order=desc')
           .then(r=>r.json())
           .then(movies => {
             const updatedMovieData = movies.map(movies => {

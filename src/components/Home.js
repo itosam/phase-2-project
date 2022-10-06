@@ -6,7 +6,7 @@ const Home = () => {
   const [recentMovies, setRecentMovies] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/movies?_sort=release_date&_order=desc&_limit=4")
+    fetch("http://localhost:3001/movies?_sort=id&_order=desc&_limit=4")
       .then((res) => res.json())
       .then((recentMovies) => {
         setRecentMovies(recentMovies);
@@ -15,10 +15,11 @@ const Home = () => {
 
   return (
     <section className="movie-box">
-      <h3>Newly Released Movies:</h3>
+      <h3>Newly Added Movies:</h3>
       {recentMovies.map((movie) => (
         <img className="home-poster"
-        src={movie.poster_path}  
+        src={movie.poster_path} 
+        style={{ width: '12rem' }} 
         onClick={(e)=>e.target.value} />
       ))}
       <div style={{ margin: "1rem 0" }}>
