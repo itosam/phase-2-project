@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.card {
+padding: 1rem;
+margin: 1rem;
+border: 2px;
+background-color: rgb(194, 200, 206);
+}
+
+.grid{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+flex-direction: row;
+}
+
+
+.home-poster{
+  width: 10%;
+  padding: 4px;
+  margin: 2px;
+}
+
+.carousel{
+  width: 57%;
+  margin: 0 auto;
+}
