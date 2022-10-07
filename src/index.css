@@ -16,21 +16,16 @@ code {
 padding: 1rem;
 margin: 1rem;
 border: 2px;
-border-color: black;
 background-color: rgb(194, 200, 206);
 }
 
 .grid{
 display: flex;
+justify-content: center;
 flex-wrap: wrap;
 flex-direction: row;
 }
-.movie-box{
-border-style: solid;
-border-color: black;
-border-radius:10px;
-width: 40%;
-}
+
 
 .home-poster{
   width: 10%;

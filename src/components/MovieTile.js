@@ -25,14 +25,14 @@ function MovieTile({
   };
 
   return (
-    <Card className="card" style={{ width: "26rem" }}>
+    <Card className="card" style={{ width: "20rem" }}>
       <Card.Img
         variant="top"
         src={poster}
         alt={title}
         style={{ width: "100%" }}
       />
-      <Card.Body>
+      <Card.Body style={{textAlign: 'left'}}>
         <Card.Title>
           <strong>{title}</strong>
         </Card.Title>

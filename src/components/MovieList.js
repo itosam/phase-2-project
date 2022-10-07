@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MovieTile from "./MovieTile";
 import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
 
 function MovieList({
   movies,
@@ -32,18 +33,23 @@ function MovieList({
   // };
   const handleOnChange = (e) => setSearchQuery(e.target.value);
   return (
-    <Container fluid>
+    <Container className="bg-light text-center" style={{ marginTop: "100px" }}>
       <h2>Movies</h2>
       <input
+        style={{ borderRadius:"5px", width: "20em", border: "#3333 2px solid", padding: "8px", margin: "10px"}}
         type="text"
         placeholder="Search..."
         onChange={handleOnChange}
         value={searchQuery}
       />
-      <button onClick={onFavoritesClick}>
+      <button
+        variant="dark"
+        style={{ backgroundColor:"black",color: "white", borderRadius:"5px", padding: "8px" }}
+        onClick={onFavoritesClick}
+      >
         {favorites ? "Show All" : "Show Favorites"}
       </button>
-      <div className="grid">{movieCards}</div>
+      <div className="grid text-left">{movieCards}</div>
       {/* <button onClick={handleClickMore}>Show More!</button> */}
     </Container>
   );

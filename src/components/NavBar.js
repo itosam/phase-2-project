@@ -5,13 +5,18 @@ function NavBar() {
   return (
     //made changeas to positionig of navbar and made it fixed to top of screen
     <header>
-      <Navbar bg="dark" fixed="top" className="justify-content-center">
+      <Navbar
+        bg="dark"
+        fixed="top"
+        className="justify-content-center"
+        style={{ height: "50px" }}
+      >
         <div className="navigation">
           <Nav>
             <Container>
               <Row>
                 <Col>
-                  <Badge pill bg="light">
+                  <Badge pill bg="light" style={{ padding: "10px 20px" }}>
                     <Nav.Item>
                       <Link to="/" style={{ textDecoration: "none" }}>
                         Home
@@ -20,7 +25,7 @@ function NavBar() {
                   </Badge>
                 </Col>
                 <Col>
-                  <Badge pill bg="light">
+                  <Badge pill bg="light" style={{ padding: "10px 20px" }}>
                     <Nav.Item>
                       <NavLink
                         className="button"
@@ -34,7 +39,7 @@ function NavBar() {
                   </Badge>
                 </Col>
                 <Col>
-                  <Badge pill bg="light">
+                  <Badge pill bg="light" style={{ padding: "10px 20px" }}>
                     <Nav.Item>
                       <NavLink
                         className="button"
@@ -47,7 +52,7 @@ function NavBar() {
                   </Badge>
                 </Col>
                 <Col>
-                  <Badge pill bg="light">
+                  <Badge pill bg="light" style={{ padding: "10px 20px" }}>
                     <Nav.Item>
                       <NavLink
                         className="button"
@@ -60,6 +65,7 @@ function NavBar() {
                   </Badge>
                 </Col>
               </Row>
+
             </Container>
           </Nav>
         </div>

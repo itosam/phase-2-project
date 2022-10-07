@@ -43,14 +43,18 @@ function MovieForm({ onAddMovie }) {
 
  return (
    // made an update to the margins on add movie from
-   <Container>
+   <Container style={{
+        padding: "20%, 20%",
+        marginBottom: "2rem",
+        marginTop: "10%"
+      }}>
      <Form
        className="form border rounded  "
        autoComplete="off"
        onSubmit={handleSubmit}
      >
        <Form.Group className="my-3 mx-3">
-         <h3>Add New Movie</h3>
+         <h3>Add A New Movie</h3>
          <Row>
            <Col>
              <Form.Label htmlFor="title">Movie Title</Form.Label>
