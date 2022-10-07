@@ -4,7 +4,7 @@ import MovieList from "./MovieList";
 import MovieForm from "./MovieForm";
 
 // import bootstrap container
-import { Container } from 'react-bootstrap'
+import { Container } from "react-bootstrap";
 
 function MovieContainer() {
   const [movies, setMovies] = useState([]);
@@ -15,13 +15,13 @@ function MovieContainer() {
     fetch("http://localhost:3001/movies?_sort=release_date&_order=desc")
       .then((r) => r.json())
       .then((movies) => {
-        console.log("here we are!")
+        console.log("movie container loaded");
         setMovies(movies);
       });
   }, []);
 
   const onAddMovie = (newMovie) => {
-    setMovies({ ...movies, newMovie });
+    setMovies([...movies, newMovie]);
   };
 
   const onFavoriteMovies = (favoriteMovies) => {

@@ -32,3 +32,8 @@ flex-direction: row;
   padding: 4px;
   margin: 2px;
 }
+
+.carousel{
+  width: 57%;
+  margin: 0 auto;
+}

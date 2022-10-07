@@ -32,7 +32,7 @@ function MovieTile({
         alt={title}
         style={{ width: "100%" }}
       />
-      <Card.Body style={{textAlign: 'left'}}>
+      <Card.Body style={{ textAlign: "left" }}>
         <Card.Title>
           <strong>{title}</strong>
         </Card.Title>

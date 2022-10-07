@@ -1,6 +1,7 @@
-import React from 'react';
+import React from "react";
 //booststrap imports below
-import { Carousel, Row, Card } from 'react-bootstrap';
+import { Carousel, Row, Card } from "react-bootstrap";
+
 function About() {
   return (
     //put a slide show on about and added margins to the containers as to not interfere with navbar top positioning
@@ -8,7 +9,7 @@ function About() {
       <Row className="my-5 mx-5 ">
         {
           <Card
-            className="bg-light"
+            className="bg-light jumbotron"
             style={{
               padding: "2rem 1rem",
               marginBottom: "2rem",
@@ -27,14 +28,13 @@ function About() {
           </Card>
         }
       </Row>
-      <Carousel
-        className="my-5 mx-5 d-block w-50"
-        style={{ margin:"20%" }}
-      >
+
+      <Carousel>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            style={{ borderRadius: "30px", height: "600px" }}
+            style={{ borderRadius: "30px" }}
+            width={1200}
+            height={500}
             alt="900x500"
             src="https://www.gannett-cdn.com/-mm-/9acbd390157cc5ea4805849aabf1c1d84141cdfb/c=0-0-660-371/local/-/media/2020/11/02/Taunton/ghows-WL-200719091-2b4c9a26.jpg?width=1200&disable=upscale&format=pjpg&auto=webp"
           />
@@ -49,10 +49,12 @@ function About() {
             <h3>Multiple examples of inverse data flow </h3>
           </Carousel.Caption>
         </Carousel.Item>
+
         <Carousel.Item clasName="border">
           <img
-            className="d-block w-100"
             style={{ borderRadius: "30px" }}
+            width={1200}
+            height={500}
             alt="900x500"
             src="https://previews.123rf.com/images/jomkwan7/jomkwan72002/jomkwan7200200621/140173805-happy-dog-pug-breed-smile-with-funny-face-lying-on-green-grass-in-garden-purebred-pug-dog-healthy-co.jpg"
           />
@@ -70,8 +72,9 @@ function About() {
 
         <Carousel.Item>
           <img
-            className="d-block w-100"
             style={{ borderRadius: "30px" }}
+            width={1200}
+            height={500}
             alt="900x500"
             src="https://iso.500px.com/wp-content/uploads/2016/02/stock-photo-125037925-1500x1000.jpg"
           />
@@ -88,10 +91,12 @@ function About() {
             </h3>
           </Carousel.Caption>
         </Carousel.Item>
+
         <Carousel.Item>
           <img
-            className="d-block w-100"
             style={{ borderRadius: "30px" }}
+            width={1200}
+            height={500}
             alt="900x500"
             src="https://media.istockphoto.com/photos/cute-happy-french-bulldog-dog-dressed-up-as-musician-wearing-a-funny-picture-id1176834578"
           />
@@ -111,4 +116,4 @@ function About() {
   );
 }
 
-export default About
+export default About;

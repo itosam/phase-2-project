@@ -1,4 +1,5 @@
 # phase-2-project
+
 Phase-2-react project
 
 For our Project, we created a mock movie database, and have added below features/user interaction
@@ -17,4 +18,3 @@ There are 7 components being used within our App structure. below is the hierchy
     -MovieContainer
         -MovieList
         -MovieTile
-

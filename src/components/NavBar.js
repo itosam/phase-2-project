@@ -65,7 +65,6 @@ function NavBar() {
                   </Badge>
                 </Col>
               </Row>
-
             </Container>
           </Nav>
         </div>
