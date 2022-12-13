@@ -122,7 +122,7 @@
       "video": false,
       "vote_average": 6.7,
       "vote_count": 815,
-      "favorite": false
+      "favorite": true
     },
     {
       "adult": false,
@@ -407,6 +407,23 @@
       "vote_average": 6.5,
       "vote_count": 164,
       "favorite": false
+    },
+    {
+      "title": "Black Adam",
+      "release_date": "2022-11-15",
+      "poster_path": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ7z46quZTThLvU4GVoaKuD0at1K9oUCdnI8C4O8lwm6F1KpYFt",
+      "overview": "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods--and imprisoned just as quickly--Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
+      "vote_average": "5",
+      "id": 999206,
+      "favorite": false
+    },
+    {
+      "title": "Spirited",
+      "release_date": "2022-12-13",
+      "poster_path": "https://www.liveforfilm.com/wp-content/uploads/2022/10/spirited_poster.jpg",
+      "overview": "A musical version of Charles Dickens's story of a miserly misanthrope who is taken on a magical journey.",
+      "vote_average": "6.6",
+      "id": 999207
     }
   ]
 }
