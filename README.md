@@ -1,6 +1,7 @@
-# phase-2-project
+# phase-2-project Movie App
 
-Phase-2-react project
+![movieappdemo](https://user-images.githubusercontent.com/96760206/207414974-b76d1186-3eff-4903-a67f-2017703f696b.gif)
+
 
 For our Project, we created a mock movie database, and have added below features/user interaction
 
@@ -10,11 +11,13 @@ For our Project, we created a mock movie database, and have added below features
 -the ability to add movies, and have them included to our movie database.
 
 There are 7 components being used within our App structure. below is the hierchy breakdown.
--App
-    -NavBar
-    -About
-    -Home
-    -MovieForm
-    -MovieContainer
-        -MovieList
-        -MovieTile
+- App
+- NavBar
+- About
+  - Home
+  - MovieForm
+  - MovieContainer
+      - MovieList
+      - MovieTile
+      
+ 
